@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/menu_tts"
+        android:title="음성 설명 "
+        android:icon="@drawable/ic_baseline_volume_up_24"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/menu_help"
+        android:title="물음표 "
+        android:icon="@drawable/ic_baseline_help_outline_24"
+        app:showAsAction="always" />
+
+
+</menu>

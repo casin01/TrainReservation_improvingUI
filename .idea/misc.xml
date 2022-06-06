@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/min/tesii/Graduate/ReserveT/app/src/main/res/layout/activity_canceltrain.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/Graduate/ReserveT/app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/Graduate/ReserveT/app/src/main/res/layout/activity_trainbook.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/border_down.xml" value="0.133" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/border_layout.xml" value="0.1555" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/border_leftbottom.xml" value="0.176" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/border_nowtable.xml" value="0.134" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/border_right.xml" value="0.13" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/border_rightbottom.xml" value="0.134" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/border_round.xml" value="0.244" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/borderall.xml" value="0.135" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/btnstate.xml" value="0.134" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/butten_pressed.xml" value="0.1555" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/circle.xml" value="0.2205" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/disabledbtn.xml" value="0.2235" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/griditemselector.xml" value="0.176" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/ic_baseline_add_box_24.xml" value="0.2015" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.1905" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.1905" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/ic_baseline_arrow_right_alt_24.xml" value="0.143" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/ic_baseline_autorenew_24.xml" value="0.191" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/ic_baseline_indeterminate_check_box_24.xml" value="0.1195" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/ic_baseline_navigate_before_24.xml" value="0.1905" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/ic_baseline_navigate_next_24.xml" value="0.244" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/ic_baseline_panorama_fish_eye_24.xml" value="0.2385" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/ic_launcher_background.xml" value="0.113" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/initialbtn.xml" value="0.2115" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/list_pressed.xml" value="0.132" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/negabtn.xml" value="0.2205" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/negativebtn.xml" value="0.2205" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/neutralbtn.xml" value="0.2345" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/pribtn.xml" value="0.2235" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/redborder.xml" value="0.2" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/secbtn.xml" value="0.2315" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/secondbtn.xml" value="0.2315" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/tab_selector.xml" value="0.1695" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/tertiarybtn.xml" value="0.2315" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/drawable/whiteborder.xml" value="0.1405" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout-v26/activity_befor_resev.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_anim1.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_authactivity.xml" value="0.2526041666666667" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_befor_resev.xml" value="0.264" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_canceltrain.xml" value="0.1" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_completeticket.xml" value="0.264" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_detail_info.xml" value="0.264" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_discount.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_docu.xml" value="0.2" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_docu1.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_docu2.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_documentation.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_find_idactivity.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_findpwd.xml" value="0.264" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_login.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_payment.xml" value="0.234375" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_register.xml" value="0.246875" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_seemytrain.xml" value="0.2" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_station_list.xml" value="0.2526041666666667" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_test1.xml" value="0.23802083333333332" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_train_now.xml" value="0.264" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_trainbook.xml" value="0.264" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/activity_tutorial.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/content_docu1.xml" value="0.17708333333333334" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/custom_dialog1.xml" value="0.16979166666666667" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/dialog1.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/dialog2btn.xml" value="0.21302083333333333" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/dialoglong.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/docuitem.xml" value="0.19895833333333332" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/fragment_onewayfragment.xml" value="0.264" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/fragment_roundtripfragment.xml" value="0.264" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/fragment_second.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/fragment_tripfragment.xml" value="0.1265625" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/listview_list_item.xml" value="0.2235294117647059" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/longdialog.xml" value="0.1921875" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/my_ticket_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/passnum_dialog.xml" value="0.25052083333333336" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/station_list_item.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/layout/tutorial.xml" value="0.2390625" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/menu/menu.xml" value="0.25364583333333335" />
+        <entry key="..\:/min/tesii/ReserveT/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2275" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_15_PREVIEW" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

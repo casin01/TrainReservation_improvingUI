@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Seemytrain">
+
+    <TextView
+        android:id="@+id/alerttxt"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textAppearance="@style/b13Text"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="승차권을 선택하세요." />
+
+    <ListView
+        android:id="@+id/listview2"
+        android:layout_below="@id/alerttxt"
+        android:clickable="true"
+        android:fadeScrollbars="false"
+        android:scrollbarFadeDuration = "0"
+        android:scrollbarAlwaysDrawVerticalTrack = "true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:dividerHeight="2dp"
+        android:divider="#A1A1A1"
+        android:listSelector="@color/grid_item_pressed"/>
+
+
+</RelativeLayout>

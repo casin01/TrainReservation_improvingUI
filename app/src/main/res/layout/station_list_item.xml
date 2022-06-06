@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/griditemselector"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tv_stationList"
+            android:singleLine="true"
+            android:padding="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="서울"
+            android:textAppearance="@style/b13Text"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

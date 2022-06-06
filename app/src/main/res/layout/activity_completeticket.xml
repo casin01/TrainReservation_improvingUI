@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".completeticket">
+
+    <!-- 상단 바 -->
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.kofigyan.stateprogressbar.StateProgressBar
+            android:id="@+id/topprogressbar1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:spb_currentStateNumber="four"
+            app:spb_maxStateNumber="four"
+            app:spb_stateBackgroundColor="#BDBDBD"
+            app:spb_stateForegroundColor="@color/primaryvariant"
+            app:spb_stateNumberBackgroundColor="#808080"
+            app:spb_stateNumberForegroundColor="#eeeeee"
+            app:spb_currentStateDescriptionColor="@color/primaryvariant"
+            app:spb_stateDescriptionColor="#808080"
+            app:spb_animateToCurrentProgressState="false"
+            app:spb_descriptionTopSpaceIncrementer="5dp"
+            app:spb_checkStateCompleted="true" />
+
+        <View
+            android:id="@+id/divider11"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
+
+    <!-- 승차권 -->
+    <LinearLayout
+        android:id="@+id/ticketview"
+        android:layout_below="@id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 날짜 출발지 도착지 -->
+        <LinearLayout
+            android:id="@+id/datelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/todate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/b13Text"
+                android:layout_gravity="center"
+                android:text="2022년 02월 18일 (수)" />
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <!-- 출발지 도착지 -->
+            <LinearLayout
+                android:id="@+id/stnlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- 출발 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/depstn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/b14Text"
+                        android:text="서울" />
+
+                    <TextView
+                        android:id="@+id/deptime"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/bb14Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="07:00" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    app:srcCompat="@drawable/ic_baseline_arrow_right_alt_24" />
+
+                <!-- 도착 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/arrstn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/b14Text"
+                        android:text="대전" />
+
+                    <TextView
+                        android:id="@+id/arrtime"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/bb14Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="17:00" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- 정보 -->
+        <!-- 기차 정보 첫 줄 -->
+        <LinearLayout
+            android:id="@+id/info1stline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ticdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/b11Text"
+                android:layout_marginStart="15dp"
+                android:autoSizeTextType="uniform"
+                android:text="ITX-새마을 3111" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/nonText"
+                android:layout_marginEnd="15dp"
+                android:text="어른 | 일반" />
+
+
+        </LinearLayout>
+
+        <!-- 기차 정보 두 번째 줄 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:orientation="horizontal">
+
+            <!-- 왼쪽-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/imp_uid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="imp_uid"
+                    android:autoSizeTextType="uniform"
+                    android:textAppearance="@style/nonText" />
+
+                <TextView
+                    android:id="@+id/merchant_uid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="merchant_uid"
+                    android:autoSizeTextType="uniform"
+                    android:textAppearance="@style/nonText" />
+
+                <TextView
+                    android:id="@+id/txt_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/b11Text"
+                    android:layout_marginTop="5dp"
+                    android:text="금액 1500000원" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- 오른쪽 -->
+            <Button
+                android:id="@+id/infobtn"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/tertiarybtn"
+                android:layout_gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:textAppearance="@style/n11Text"
+                android:text="승차 이용 안내" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider9"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="?android:attr/listDivider" />
+
+        <!-- 타는 곳은 ~ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/infomsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textAppearance="@style/b11Text"
+                android:textAlignment="center"
+                android:layout_gravity="center_horizontal"
+                android:text="타는 곳은 열차 출발 15분 전 역사 내 \n전광판을 확인하여 주시기 바랍니다." />
+
+            <View
+                android:id="@+id/divider10"
+                android:layout_below="@id/infolayout"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="?android:attr/listDivider" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 빨간 alert msg -->
+    <TextView
+        android:id="@+id/vermsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/enterlay"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:text="예매가 완료되었습니다."
+        android:textColor="@color/secondaryvariant"
+        android:textSize="15pt"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/enterlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/gobtn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="완료"
+            android:padding="10dp"
+            android:background="@color/active"
+            android:textSize="13pt"
+            android:textAppearance="@style/btnText" />
+    </LinearLayout>
+
+
+</RelativeLayout>

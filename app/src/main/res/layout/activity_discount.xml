@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DiscountActivity">
+
+    <!-- 맨 위 텍스트 -->
+    <LinearLayout
+        android:id="@+id/toplayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="선택 :  "
+        android:textAppearance="@style/b13Text" />
+
+        <TextView
+            android:id="@+id/seltext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textStyle="bold"
+            android:textAppearance="@style/b13Text" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@id/toplayout"
+        android:id="@+id/divider12"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_margin="10dp"
+        android:background="?android:attr/listDivider" />
+
+    <!-- 라디오 버튼-->
+    <RadioGroup
+        android:id="@+id/radiogroup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider12"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rabtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text=" 선택 안 함"
+            android:textAppearance="@style/b11Text" />
+
+        <RadioButton
+            android:id="@+id/rabtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text=" 국가유공자"
+            android:textAppearance="@style/b11Text" />
+
+        <RadioButton
+            android:id="@+id/rabtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text=" 국가유공자 보호자"
+            android:textAppearance="@style/b11Text" />
+
+        <RadioButton
+            android:id="@+id/rabtn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text=" 지연할인증"
+            android:textAppearance="@style/b11Text" />
+
+        <RadioButton
+            android:id="@+id/rabtn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:text=" 할인쿠폰/회원쿠폰"
+            android:textAppearance="@style/b11Text" />
+
+    </RadioGroup>
+
+    <!-- 맨 위 텍스트 -->
+    <TextView
+        android:layout_below="@+id/radiogroup1"
+        android:id="@+id/testtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="20dp"
+        android:textAppearance="@style/nonText"
+        android:text="테스트에서는 할인이 모두 같은 가격으로 적용됩니다."/>
+
+    <!-- 적용하기 버튼-->
+    <LinearLayout
+        android:id="@+id/enterlay2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/gobtn5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="적용하기"
+            android:padding="15dp"
+            android:background="@color/active"
+            android:textSize="13pt"
+            android:textAppearance="@style/btnText" />
+    </LinearLayout>
+
+</RelativeLayout>

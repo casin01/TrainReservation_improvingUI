@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".trainNow">
+
+    <!--상단 바 -->
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.kofigyan.stateprogressbar.StateProgressBar
+            android:id="@+id/topprogressbar1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:spb_currentStateNumber="two"
+            app:spb_maxStateNumber="four"
+            app:spb_stateBackgroundColor="#BDBDBD"
+            app:spb_stateForegroundColor="@color/primaryvariant"
+            app:spb_stateNumberBackgroundColor="#808080"
+            app:spb_stateNumberForegroundColor="#eeeeee"
+            app:spb_currentStateDescriptionColor="@color/primaryvariant"
+            app:spb_stateDescriptionColor="#808080"
+            app:spb_animateToCurrentProgressState="false"
+            app:spb_descriptionTopSpaceIncrementer="5dp"
+            app:spb_checkStateCompleted="true" />
+
+        <View
+            android:id="@+id/divider11"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider" />
+
+
+
+    </LinearLayout>
+
+    <!-- 상단 날짜 -->
+    <LinearLayout
+        android:id="@+id/datelayout"
+        android:layout_below="@id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- 오늘 날짜 -->
+        <TextView
+            android:id="@+id/seldate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/b11Text"
+            android:text="2022년 03월 03일 (화)" />
+    </LinearLayout>
+
+    <!-- 조회 -->
+    <LinearLayout
+        android:id="@+id/nowlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnlay"
+        android:layout_below="@id/datelayout"
+        android:orientation="vertical">
+
+        <!-- 열차 출발 도착 -->
+        <LinearLayout
+            android:id="@+id/top_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_nowtable"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="열차"
+                android:textAppearance="@style/b11Text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_down"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="출발"
+                android:textAppearance="@style/b11Text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_leftbottom"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="도착"
+                android:textAppearance="@style/b11Text"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/alrtxt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="원하는 표를 터치하세요."
+            android:textAppearance="@style/animguideTxt" />
+
+        <!-- 조회 결과 -->
+        <ListView
+            android:id="@+id/listview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:choiceMode="singleChoice"
+            android:clickable="true"
+            android:divider="#A1A1A1"
+            android:dividerHeight="2dp"
+            android:fadeScrollbars="false"
+            android:listSelector="@color/grid_item_pressed"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbarFadeDuration="0" />
+
+        <TextView
+            android:id="@+id/no_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="역 운행정보가 없습니다."
+            android:textAppearance="@style/b13Text"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <!-- 예약 버튼 -->
+    <LinearLayout
+        android:id="@+id/btnlay"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/gobtn"
+            android:onClick="mClick"
+            android:textColor="#acacac"
+            android:background="@drawable/btnstate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13pt"
+            android:textAppearance="@style/btnText"
+            android:padding="10dp"
+            android:text="예매하기"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--메인 레이아웃 -->
+        <LinearLayout
+            android:id="@+id/mainlayout"
+            android:alpha="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- 상단 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="기차 예약"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="22pt" />
+
+                <Button
+                    android:id="@+id/btnlogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="로그인"
+                    android:visibility="gone"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/tertiarybtn"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:textAppearance="@style/b13Text" />
+
+                <!-- 로그인 되어있을때 -->
+                <LinearLayout
+                    android:id="@+id/currentlayout"
+                    android:visibility="visible"
+                    android:layout_marginEnd="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/b13Text"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:text="눈송이 님" />
+
+                    <Button
+                        android:id="@+id/btnlogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:background="@drawable/tertiarybtn"
+                        android:layout_marginTop="8dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:textAppearance="@style/b13Text"
+                        android:text="로그아웃" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 본 버튼 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="4"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:background="@drawable/tertiarybtn"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/b13Text"
+                    android:textSize="15pt"
+                    android:text="열차 예매" />
+
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:text="승차권 조회 및 취소"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/tertiarybtn"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/b13Text"
+                    android:textSize="15pt" />
+
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="340dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="종합 이용 안내"
+                    android:background="@drawable/tertiarybtn"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/b13Text"
+                    android:textSize="15pt" />
+
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text=" 종료 "
+                    android:background="@drawable/tertiarybtn"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/b13Text"
+                    android:textSize="15pt" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- 위 튜토리얼 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tutlayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/tutorial"/>
+
+
+            <ImageView
+                android:id="@+id/centerarrow"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tut_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tutmsg"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="30dp"
+                android:text="어플사용법이 궁금하면\n도움말을 터치하세요.\n\n도움말 버튼을 한번 더 터치하면\n도움말이 사라집니다."
+                android:textAppearance="@style/b13Text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/centerarrow" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/divider14"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/btnenter14"
+        android:background="#FFFFFF" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btnenter14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="확인"
+        android:textAppearance="@style/b13Text"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

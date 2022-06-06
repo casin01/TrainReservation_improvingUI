@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:weightSum="3"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/traintype"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="KTX"
+            android:textAppearance="@style/b11Text"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/deptrain"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="12pt"
+            android:textAppearance="@style/b11Text"
+            android:gravity="center"
+            android:text="서울\n05:22" />
+
+        <TextView
+            android:id="@+id/arrtrain"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="12pt"
+            android:textAppearance="@style/b11Text"
+            android:text="부산\n19:30"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:orientation="vertical">
+
+        <!-- 어른 청소년 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="어른, 청소년 \n(만 13세 이상)"
+                android:textAppearance="@style/tabText" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right">
+
+            <Button
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/minusad"
+                android:contentDescription="어른 좌석 1명 빼기"
+                android:onClick="numClick"
+                android:background="@drawable/ic_baseline_indeterminate_check_box_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/numText"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:id="@+id/adultnum"
+                android:text="1"/>
+
+            <Button
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:id="@+id/addad"
+                android:onClick="numClick"
+                android:contentDescription="어른 좌석 1명 추가"
+                android:background="@drawable/ic_baseline_add_box_24" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 어린이 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="어린이"
+                android:textAppearance="@style/tabText" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end">
+
+                <Button
+                    android:layout_width="25pt"
+                    android:layout_height="25pt"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/minusch"
+                    android:onClick="numClick"
+                    android:contentDescription="어린이 좌석 1명 빼기"
+                    android:background="@drawable/ic_baseline_indeterminate_check_box_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/numText"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/child"
+                    android:text="0"/>
+
+                <Button
+                    android:layout_width="25pt"
+                    android:layout_height="25pt"
+                    android:id="@+id/addch"
+                    android:onClick="numClick"
+                    android:contentDescription="어린이 좌석 1명 추가"
+                    android:background="@drawable/ic_baseline_add_box_24" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- 경증 장애인 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="경증 장애인"
+                android:textAppearance="@style/tabText" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end">
+
+                <Button
+                    android:layout_width="25pt"
+                    android:layout_height="25pt"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/minusno"
+                    android:onClick="numClick"
+                    android:contentDescription="경증 장애인 좌석 1명 빼기"
+                    android:background="@drawable/ic_baseline_indeterminate_check_box_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/numText"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/notsevdis"
+                    android:text="0"/>
+
+                <Button
+                    android:layout_width="25pt"
+                    android:layout_height="25pt"
+                    android:id="@+id/addno"
+                    android:onClick="numClick"
+                    android:contentDescription="경증 장애인 1명 추가"
+                    android:background="@drawable/ic_baseline_add_box_24" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- 중증 장애인-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="중증 장애인"
+                android:textAppearance="@style/tabText" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="end">
+
+                <Button
+                    android:layout_width="25pt"
+                    android:layout_height="25pt"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/minusse"
+                    android:onClick="numClick"
+                    android:contentDescription="중증 장애인 좌석 1명 빼기"
+                    android:background="@drawable/ic_baseline_indeterminate_check_box_24" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/numText"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="10dp"
+                    android:id="@+id/severedis"
+                    android:text="0"/>
+
+                <Button
+                    android:layout_width="25pt"
+                    android:layout_height="25pt"
+                    android:id="@+id/addse"
+                    android:onClick="numClick"
+                    android:contentDescription="중증 장애인 좌석 1명 추가"
+                    android:background="@drawable/ic_baseline_add_box_24" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10pt"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/title18Text"
+                android:text="총 인원"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/numText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textSize="18pt"
+                android:textColor="#000000"
+                android:gravity="end"
+                android:layout_marginEnd="20dp"
+                android:text="1 명"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 아래 버튼 -->
+    <LinearLayout
+        android:id="@+id/enterlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/resetbtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="초기화"
+            android:padding="15dp"
+            android:background="@drawable/disabledbtn"
+            android:onClick="numClick"
+            android:textColor="@color/btnborder"
+            android:textAppearance="@style/b13Text" />
+
+        <Button
+            android:id="@+id/gobtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:onClick="mOnClose"
+            android:text="확인"
+            android:padding="15dp"
+            android:background="@color/active"
+            android:textColor="@color/white"
+            android:textAppearance="@style/a13Text" />
+    </LinearLayout>
+
+</RelativeLayout>

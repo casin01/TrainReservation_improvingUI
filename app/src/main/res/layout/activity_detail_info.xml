@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailInfo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:scrollbarFadeDuration = "0"
+        android:scrollbarAlwaysDrawVerticalTrack = "true">
+
+        <!-- 승차권 -->
+        <LinearLayout
+            android:id="@+id/ticketview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 날짜 출발지 도착지 -->
+            <LinearLayout
+                android:id="@+id/datelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/todate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/b13Text"
+                    android:layout_gravity="center"
+                    android:text="2022년 02월 18일 (수)" />
+
+                <View
+                    android:id="@+id/divider0"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="?android:attr/listDivider" />
+
+                <!-- 출발지 도착지 -->
+                <LinearLayout
+                    android:id="@+id/stnlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- 출발 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/depstn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textAppearance="@style/b14Text"
+                            android:text="서울" />
+
+                        <TextView
+                            android:id="@+id/deptime"
+                            android:layout_gravity="center"
+                            android:textAppearance="@style/bb14Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="07:00" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginRight="45dp"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        app:srcCompat="@drawable/ic_baseline_arrow_right_alt_24" />
+
+                    <!-- 도착 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/arrstn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textAppearance="@style/b14Text"
+                            android:text="대전" />
+
+                        <TextView
+                            android:id="@+id/arrtime"
+                            android:layout_gravity="center"
+                            android:textAppearance="@style/bb14Text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="17:00" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="5dp"
+                android:background="?android:attr/listDivider" />
+
+            <!-- 정보 -->
+            <!-- 기차 정보 첫 줄 -->
+            <LinearLayout
+                android:id="@+id/info1stline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/ticdetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/b11Text"
+                    android:layout_marginStart="15dp"
+                    android:autoSizeTextType="uniform"
+                    android:text="KTX-산천(B-type) 4051" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/people"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/nonText"
+                    android:layout_marginEnd="15dp"
+                    android:text="어른 | 일반" />
+
+
+            </LinearLayout>
+
+            <!-- 기차 정보 두 번째 줄 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:orientation="horizontal">
+
+                <!-- 왼쪽-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/imp_uid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="imp_uid"
+                        android:autoSizeTextType="uniform"
+                        android:textAppearance="@style/nonText" />
+
+                    <TextView
+                        android:id="@+id/merchant_uid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="merchant_uid"
+                        android:autoSizeTextType="uniform"
+                        android:textAppearance="@style/nonText" />
+
+                    <TextView
+                        android:id="@+id/txt_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/b11Text"
+                        android:layout_marginTop="5dp"
+                        android:text="금액 1500000원" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <!-- 오른쪽 -->
+                <FrameLayout
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/infobtn"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:background="@drawable/tertiarybtn"
+                        android:textAppearance="@style/n11Text"
+                        android:text="승차 이용 안내" />
+
+                    <View
+                        android:id="@+id/ani1"
+                        android:alpha="0.0"
+                        android:layout_width="180dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/guideborder" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <!-- alert msg -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- alert msg -->
+                <TextView
+                    android:id="@+id/alrtxt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:maxLines="1"
+                    android:gravity="end"
+                    android:layout_marginEnd="20dp"
+                    android:text="예매 시 유의사항"
+                    android:textAppearance="@style/animguideTxt" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="?android:attr/listDivider" />
+
+            </FrameLayout>
+
+            <!-- 타는 곳은 ~ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/infomsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/b11Text"
+                    android:text="- 타는 곳은 열차 출발 15분 전 역사 내 \n전광판을 확인하여 주시기 바랍니다." />
+
+
+                <TextView
+                    android:id="@+id/infomsg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:textAppearance="@style/b11Text"
+                    android:text="- 사진이나 캡쳐한 화면은 유효한 승차권이 아닙니다." />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/alrtxt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="top"
+                    android:maxLines="1"
+                    android:gravity="end"
+                    android:layout_marginEnd="15dp"
+                    android:text="승차권 취소하려면 터치"
+                    android:textAppearance="@style/animguideTxt" />
+
+                <View
+                    android:id="@+id/divider6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="5dp"
+                    android:background="?android:attr/listDivider" />
+
+
+            </FrameLayout>
+
+            <!-- 예매 취소 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/refundbtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:layout_gravity="center"
+                        android:text="승차권 취소하기"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:background="@drawable/negativebtn"
+                        android:textColor="@color/secondaryvariant"
+                        android:textAppearance="@style/b13Text"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/ani2"
+                        android:alpha="0.0"
+                        android:layout_gravity="center"
+                        android:layout_width="245dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/guideborder" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 아래 버튼 -->
+    <LinearLayout
+        android:id="@+id/enterlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/enterbtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="닫기"
+            android:padding="10dp"
+            android:background="@color/active"
+            android:textSize="13pt"
+            android:textAppearance="@style/btnText" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".trainbook">
+
+    <!--상단 바 -->
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.kofigyan.stateprogressbar.StateProgressBar
+            android:id="@+id/topprogressbar1"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:spb_currentStateNumber="one"
+            app:spb_maxStateNumber="four"
+            app:spb_stateBackgroundColor="#BDBDBD"
+            app:spb_stateForegroundColor="@color/primaryvariant"
+            app:spb_stateNumberBackgroundColor="#808080"
+            app:spb_stateNumberForegroundColor="#eeeeee"
+            app:spb_currentStateDescriptionColor="@color/primaryvariant"
+            app:spb_stateDescriptionColor="#808080"
+            app:spb_animateToCurrentProgressState="false"
+            app:spb_descriptionTopSpaceIncrementer="5dp"
+            app:spb_checkStateCompleted="true" />
+
+        <View
+            android:id="@+id/divider11"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
+
+    <!-- 출발지 도착지 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stnlayout"
+        android:layout_below="@id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- 출발 -->
+        <LinearLayout
+            android:id="@+id/depstnlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/arrowimage"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="출발역"
+                android:textAppearance="@style/b11Text"
+                app:layout_constraintBottom_toTopOf="@+id/frameLayout" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/startstn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/blackbtn"
+                    android:onClick="mClick"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="서울"
+                    android:textAppearance="@style/b14Text" />
+
+                <View
+                    android:id="@+id/ani1_1"
+                    android:layout_width="160dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/guideborder"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrowimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:scaleX="2"
+            android:scaleY="2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/arrstnlayout"
+            app:layout_constraintStart_toEndOf="@+id/depstnlayout"
+            app:srcCompat="@drawable/ic_baseline_arrow_right_alt_24" />
+
+        <!-- 도착 -->
+        <LinearLayout
+            android:id="@+id/arrstnlayout"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@+id/arrowimage"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="도착역"
+                android:textAppearance="@style/b11Text" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp">
+
+                <Button
+                    android:id="@+id/deststn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/blackbtn"
+                    android:onClick="mClick"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="대전"
+                    android:textAppearance="@style/b14Text" />
+
+                <View
+                    android:id="@+id/ani1_2"
+                    android:layout_width="160dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/guideborder"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_below="@id/stnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/alrtxt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.0"
+            android:gravity="center"
+            android:text="출발역과 도착역 설정"
+            android:textAppearance="@style/animguideTxt" />
+    </LinearLayout>
+
+    <!-- 가는 날 -->
+    <LinearLayout
+        android:id="@+id/goday"
+        android:layout_below="@id/stnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/b11Text"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="가는 날짜" />
+
+        <FrameLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/calbtn1"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2022년 01월 01일 00시 이후"
+                android:onClick="mOnClick_DatePick"
+                android:background="@drawable/blackbtn"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:textAppearance="@style/b13Text"
+                />
+
+            <View
+                android:id="@+id/ani2_1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:background="@drawable/guideborder"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/goday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/alrtxt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.0"
+            android:gravity="center"
+            android:text="가는 날짜 설정"
+            android:textAppearance="@style/animguideTxt" />
+    </LinearLayout>
+
+    <!-- 승객인원 -->
+    <LinearLayout
+        android:id="@+id/peolay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/goday"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인원 수"
+            android:textAppearance="@style/b11Text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/penum"
+                android:layout_marginEnd="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:minWidth="48dp"
+                android:focusable="false"
+                android:enabled="false"
+                android:textColor="#000000"
+                android:text="총  0 명"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="@style/b14Text" />
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/selectseat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="좌석 선택"
+                    android:onClick="mClick"
+                    android:background="@drawable/blackbtn"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_gravity="center"
+                    android:textAppearance="@style/b14Text" />
+
+                <View
+                    android:id="@+id/ani3_1"
+                    android:alpha="0.0"
+                    android:layout_width="180dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/guideborder"/>
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- alrtmsg -->
+    <LinearLayout
+        android:layout_below="@id/peolay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/alrtxt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:alpha="0.0"
+            android:text="탑승 인원 수 설정"
+            android:textAppearance="@style/animguideTxt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/enterlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/gobtn"
+            android:background="@color/active"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="mClick"
+            android:text="열차 조회"
+            android:padding="10dp"
+            android:textSize="13pt"
+            android:textAppearance="@style/btnText" />
+    </LinearLayout>
+
+</RelativeLayout>

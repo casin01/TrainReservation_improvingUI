@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tutorialActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 뒷배경 -->
+        <RelativeLayout
+            android:alpha="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/circle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/circle"/>
+            <!--상단 바 -->
+            <LinearLayout
+                android:id="@+id/topbar"
+                android:layout_below="@id/circle2"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.kofigyan.stateprogressbar.StateProgressBar
+                    android:id="@+id/topprogressbar1"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:spb_currentStateNumber="one"
+                    app:spb_maxStateNumber="four"
+                    app:spb_stateBackgroundColor="#BDBDBD"
+                    app:spb_stateForegroundColor="@color/primaryvariant"
+                    app:spb_stateNumberBackgroundColor="#808080"
+                    app:spb_stateNumberForegroundColor="#eeeeee"
+                    app:spb_currentStateDescriptionColor="@color/primaryvariant"
+                    app:spb_stateDescriptionColor="#808080"
+                    app:spb_animateToCurrentProgressState="false"
+                    app:spb_descriptionTopSpaceIncrementer="5dp"
+                    app:spb_checkStateCompleted="true" />
+
+                <View
+                    android:id="@+id/divider11"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="?android:attr/listDivider" />
+
+            </LinearLayout>
+
+            <!-- 출발지 도착지 -->
+            <LinearLayout
+                android:id="@+id/stnlayout"
+                android:layout_below="@id/topbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- 출발 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/b11Text"
+                        android:text="출발역" />
+
+
+                    <Button
+                        android:id="@+id/startstn"
+                        android:textAppearance="@style/b14Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/blackbtn"
+                        android:paddingTop="5dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="서울" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:scaleX="2"
+                    android:scaleY="2"
+                    app:srcCompat="@drawable/ic_baseline_arrow_right_alt_24" />
+
+                <!-- 도착 -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/b11Text"
+                        android:text="도착역" />
+
+                    <Button
+                        android:id="@+id/deststn"
+                        android:textAppearance="@style/b14Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/blackbtn"
+                        android:paddingTop="5dp"
+                        android:layout_marginTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="대전" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 가는 날 -->
+            <LinearLayout
+                android:id="@+id/goday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stnlayout"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/calbtn1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/blackbtn"
+                    android:paddingStart="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="2022년 01월 01일 00시 이후"
+                    android:textAppearance="@style/b13Text" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="가는 날짜"
+                    android:textAppearance="@style/b11Text" />
+
+
+            </LinearLayout>
+
+            <!-- 승객인원 -->
+            <LinearLayout
+                android:id="@+id/peolay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goday"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="인원 수"
+                    android:textAppearance="@style/b13Text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:orientation="horizontal">
+
+
+                    <EditText
+                        android:id="@+id/penum"
+                        android:layout_marginEnd="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:minWidth="48dp"
+                        android:focusable="false"
+                        android:enabled="false"
+                        android:textColor="#000000"
+                        android:text="총  0 명"
+                        android:layout_gravity="center_vertical"
+                        android:textAppearance="@style/b14Text" />
+
+                    <Button
+                        android:id="@+id/selectseat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="좌석 선택"
+                        android:background="@drawable/blackbtn"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:layout_gravity="center"
+                        android:textAppearance="@style/b14Text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- 위 튜토리얼 -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/tutorial"
+            android:layout_alignParentEnd="true">
+
+            <ImageView
+                android:id="@+id/circle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/circle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/centerarrow"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/tut_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/circle" />
+
+            <TextView
+                android:id="@+id/tutmsg"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="50dp"
+                android:text="어플사용법이 궁금하면\n도움말을 터치하세요.\n\n도움말 버튼을 한번 더 터치하면\n도움말이 사라집니다."
+                android:textAppearance="@style/b13Text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/centerarrow" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/btnenter"
+        android:background="#FFFFFF" />
+
+
+    <Button
+        android:id="@+id/btnenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@null"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="확인"
+        android:textAppearance="@style/b13Text"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

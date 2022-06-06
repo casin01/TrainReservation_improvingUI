@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/sellayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+
+        <!-- 역 검색 -->
+        <!--
+        <EditText
+            android:visibility="gone"
+            android:id="@+id/et_stationSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="역을 입력하세요"
+            android:textSize="10pt" />
+
+        -->
+
+        <!-- 초성버튼-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:text="ㄱ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㄴ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㄷ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn4"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㄹ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn5"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㅁ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn6"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㅂ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn7"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㅅ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <Button
+                    android:id="@+id/btn8"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:text="ㅇ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn9"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㅈ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn10"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㅊ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn11"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㅋ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn12"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㅌ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn13"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㅍ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+                <Button
+                    android:id="@+id/btn14"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="60dp"
+                    android:text="ㅎ"
+                    android:onClick="iniClick"
+                    android:textAppearance="@style/b11Text" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#ffeeeeee"
+            android:drawSelectorOnTop="true"
+            android:horizontalSpacing="2dp"
+            android:numColumns="auto_fit"
+            android:stretchMode="columnWidth"
+            android:fadeScrollbars="false"
+            android:scrollbarFadeDuration = "0"
+            android:scrollbarAlwaysDrawVerticalTrack = "true"
+            android:verticalSpacing="2dp" />
+
+    </LinearLayout>
+
+
+    <!-- 닫기 버튼 -->
+    <!--
+<LinearLayout
+    android:id="@+id/btnlay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_marginTop="30dp">
+
+    <Button
+        android:id="@+id/gobtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="mOnClose"
+        android:padding="15dp"
+        android:text="확인"
+        android:textAppearance="@style/conText" />
+</LinearLayout>
+-->
+<!--// 닫기 버튼 -->
+
+</RelativeLayout>
